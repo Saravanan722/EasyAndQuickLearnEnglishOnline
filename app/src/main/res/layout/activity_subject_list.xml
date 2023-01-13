@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".subject.SubjectListActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#7D54DF"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/back_button"
+            android:layout_marginTop="20dp"
+            android:text="ENGLISH"
+            android:textSize="30sp"
+            android:textColor="#EDEDED"/>
+
+        <TextView
+            android:id="@+id/main_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/english"
+            android:layout_marginTop="10dp"
+            android:text="MAIN UNITS"
+            android:textSize="35sp"
+            android:textColor="#FBFAFA"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativelayout"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        tools:listitem="@layout/item_subject" />
+
+</RelativeLayout>
